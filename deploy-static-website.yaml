@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: nginx
-          image: docker.io/library/staticwebsite:v1
+          image: docker.io/library/staticwebsite:v2
           resources:
             limits:
               memory: "128Mi"
