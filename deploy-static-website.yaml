@@ -25,4 +25,22 @@ spec:
       imagePullSecrets:
         - name: myregistrykey
       restartPolicy: Always
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  name: nginx-deployment
+spec:
+  ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 80
+  selector:
+    app: nginx
+  type: LoadBalancer
+status:
+  loadBalancer: {}
+
       
